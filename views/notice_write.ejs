@@ -1,0 +1,50 @@
+
+    <div class="titleArea">
+      <div class="w1200">
+          <ul class="pageUtil">
+              <li><a href=""></a></li>
+              <li><a href=""></a></li>
+              <li><a href=""></a></li>
+          </ul>
+          <h2 class="f_bold">공지작성</h2>
+          <form action="noticeW" method="post" >
+            <table class="write">
+              <tr class="write_cell">
+                <td class="write_title"><span>*</span>카테고리</td>
+                <td class="write_select">
+                  <input class="write_radio" type='radio' name='radio' value='안내' checked/>안내
+                  <input class="write_radio" type='radio' name='radio' value='신상품'/>신상품
+                  <input class="write_radio" type='radio' name='radio' value='입찰공고'/>입찰공고
+                  <input class="write_radio" type='radio' name='radio' value='약관개정'/>약관개정
+                  <input class="write_radio" type='radio' name='radio' value='채용'/>채용
+                </td>
+              </tr>
+              <tr class="write_cell">
+                <td class="write_title"><span>*</span>작성자</td>
+                <td class="write_select"><input type="text" name="write" id="write_writer" maxlength="30"></td>
+              </tr>
+              <tr class="write_cell">
+                <td class="write_title"><span>*</span>제목</td>
+                <td class="write_select"><input type="text" name="title" id="write_title"></td>
+              </tr>
+              <tr class="write_cell">
+                <td class="write_title"><span>*</span>업로드 일자</td>
+                <td class="write_select">
+                  <input class="write_radio" type='radio' name='upload_radio' value="today" checked/>즉시 업로드
+                  <input class="write_radio" type='radio' name='upload_radio' value=''/>예약업로드
+                  <input type="date" id="upload_date" name="reserv_up" max="" min="" value="" disabled="disabled">
+                </td>
+              </tr>
+              <tr class="write_cell write_cont">
+                <td class="write_title write_cont_td"><span>*</span>내용</td>
+                <td class="write_select write_cont_td"><textarea name="write_cont" id="write_cont" cols="30" rows="10"></textarea></td>
+              </tr>
+            </table>
+            <div class="write_btn_wrap">
+              <a href="notiConPage"><button type="reset" class="write_btn f_bold write_cancle" onclick="javascript:location.href='/sub_noticeList'">취소</button></a>
+              <input class="write_btn f_bold" type="submit" name="upload" id="" value="등록">
+            </div>
+          </form>
+    </div>
+  </div>
+  <script src="js/notice.js"></script>

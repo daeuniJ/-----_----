@@ -1,0 +1,369 @@
+.faq_searchBox{
+    width: 100%; 
+    display: flex;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    background-color: #fbfbfb;
+    border-radius: 4px;
+}
+.faq_searchBox>div{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+.faq_searchBox>div>div{
+    display: flex;
+    justify-content: space-between;
+}
+select.faq_ST{
+    background-image: url(../img/sub_noticeList/btn_select.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-color: #fff;
+    padding: 0 45px 0 18px;
+    appearance: none;
+    width: 180px ; height: 40px;
+    outline: none;
+
+}
+.faq_col{
+    margin-right: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.faq_searchKeyword{
+    width: 100%; height: 36px;
+    outline: none;
+}
+#faq_btn{
+    display: inline-block;
+    min-width: 100px;
+    height: 40px;
+    padding: 0 14px;
+    background-color: #FFCF00;
+    vertical-align: middle;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/* tab 네비 */
+.faq_tabList{
+    width: 65%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+.faq_tablink{
+    /* display: table-cell; */
+    width: calc(25% - 1px); height: 37px;
+    line-height: 37px;
+    border-left: 1px solid #ddd;
+    background-color: #fbfbfb;  
+    text-align: center;
+    vertical-align: middle; 
+    font-weight: 300;
+    cursor: pointer;
+}
+
+
+/* faq 검색 박스 */
+.faqTop{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    box-sizing: border-box;
+    border-top: 1px solid #ddd;
+    flex-wrap: wrap;
+}
+.faq_totalP{
+    line-height: 40px;
+    padding-left: 35px;
+    box-sizing: border-box;
+    background-image: url(../img/sub_noticeList/ico_totalList.png);
+    background-repeat: no-repeat;
+    background-position: 0 center;
+}
+.faqTop strong{
+    color: #000;
+}
+
+.faq_order{
+    display: flex;
+}
+.faq_order>ul{
+    display: flex;
+    vertical-align: middle;
+}
+
+.faq_order>ul>li{
+    line-height: 40px;
+    padding: 0 10px;
+    position: relative;
+}
+.faq_order>ul>li:first-child:after{
+    display: block;
+    content: '';
+    width: 1px; height: 15px;
+    background-color: #ddd;
+    position: absolute;
+    top: 32%; right: 0;
+}
+.faq_order>ul>li:first-child>a{
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+.faq_order>ul>li:last-child>a{
+    text-decoration: none;
+    font-size: 16px;
+}
+.faq_viewPageBtn{
+    display: inline-block;
+    width: 58px; height: 40px;
+    /* padding: 0 14px; */
+    background-color: #755F48;
+    vertical-align: middle;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+}
+
+
+/* faq 제목 tab 섹션*/
+.faq_tabcont{
+    display: none;
+}
+#faq_tab1{
+    display: block;
+}
+.faq_tablink.active{
+    background-color: #FFCF00;
+    color: #000;
+}
+/* faq 아코디언 섹션*/
+.faq_tabcont_1st{
+    border-top: 2px solid #333;
+}
+.faq_title{
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+}
+.faq_title::after{
+    display: block;
+    content: '';
+    position: absolute;
+    top: 50%; right: 30px;
+    transform: translateY(-50%);
+    width: 38px; height: 38px;
+    background-image: url(../img/faqPage/btn_faq.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.faq_tabcont span{
+    position: absolute;
+    top: 50%; left: 0 ;
+    padding: 0 40px;
+    transform: translateY(-50%);
+    color: #7f7f7f;
+}
+.faqTab_tit{
+    display: block;
+    padding: 25px 80px 25px 163px;
+    background-image: url(../img/faqPage/icon_q.png);
+    background-repeat: no-repeat;
+    background-position: 86px center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    position: relative;
+}
+.faqTab_text{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+.faqTab_innertext{
+    padding: 25px 80px 20px 163px;
+    box-sizing: border-box;
+    background-image: url(../img/faqPage/icon_a.png);
+    background-repeat: no-repeat;
+    background-position: 86px 25px;
+    border-bottom: 1px solid #ddd;
+    background-color: #F4F2EF;
+
+}
+.faq_active{
+    color: #755F48;
+    font-weight: bold;
+}
+
+
+
+.faq_paging{
+    padding-bottom: 60px !important;
+}
+
+/* 하단 도움말 */
+.faq_bottomHelp{
+    width: 100%;
+    background-color: #fbfbfb;
+    padding-bottom: 47px;
+}
+.faq_bottomHelp h3{
+    padding: 30px 0;
+    text-align: center;
+}
+.faq_bottomHelp ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.faq_bottomHelp ul>li{
+    width: 33.33%;
+    background-repeat: no-repeat;
+    background-position: 20% 4px;
+    padding-left: 150px;
+    box-sizing: border-box;
+}
+.faq_bottomHelp ul>li:first-child{
+    background-image: url(../img/faqPage/전화상담예약.png);
+}
+.faq_bottomHelp ul>li:nth-child(2){
+    background-image: url(../img/faqPage/온라인상담.png);
+}
+.faq_bottomHelp ul>li:last-child{
+    background-image: url(../img/faqPage/화면공유상담.png);
+}
+.faq_bottomHelp a{
+    display: block;
+    text-decoration: none;
+    color: #755F48;
+    width: 47px; height: 18px;
+    border-bottom: 1px solid #755F48;
+}
+.faq_bottomHelp li>h4{
+    margin: 20px 0;
+}
+
+#topBtn{
+    width: 50px; height: 50px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fbfbfb;
+    text-align: center;
+    font-size: 16px;
+    line-height: 50px;
+    position: fixed;
+    bottom: 10px; right: 2%;
+    padding-top: 5px;
+    box-sizing: border-box;
+    background-image: url(../img/faqPage/btn_go_top.png);
+    background-repeat: no-repeat;
+    background-position: 50% 9px;
+    opacity: 0;
+    transition: 1s;
+    cursor: pointer;
+}
+#topBtn.topActive{
+    opacity: 1;
+    bottom: 100px;
+}
+
+
+/*** 반응형 1200px ***/
+
+@media (max-width: 1200px) {
+    #topBtn.topActive{
+        display: none;
+    }
+}
+  
+  /*** 반응형 1200px ***/
+
+
+/*** 반응형 800px ***/
+@media(max-width: 800px){
+    #faq_searchCondition{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .faq_searchBox>div>div{
+        width: 100%;
+    }
+    .faq_searchBox>div>div>div{
+        width: 72%;
+    }
+    #faq_btn{
+        width: 25%;
+    }
+
+
+    .faq_tabList{
+        width: 100%;
+    }
+    .faq_tablink{
+        width: calc(50% - 1px);
+    }
+    .faq_tabList>li:first-child{
+        border-bottom: 1px solid #ddd;
+    }
+    .faq_tabList>li:last-child{
+        border-top: 1px solid #ddd;
+    }
+
+    .faqTop{
+        width: 100%;
+    }
+    .faq_totalP{
+        width: 50%;
+    }
+    .faq_order{
+        width: 100%;
+    }
+
+
+    .faq_bottomHelp ul>li{
+        padding-left: 15.75vw;
+    }
+
+  }
+  /*** 반응형 800px ***/
+
+
+/*** 반응형 700px ***/
+
+@media (max-width: 700px) {
+    .faq_bottomHelp ul>li{
+        padding-top: 70px;
+        padding-left: 7.75vw;
+        background-position: 45% 4px;
+
+    }
+
+}
+  
+  /*** 반응형 700px ***/
+

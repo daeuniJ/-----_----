@@ -1,0 +1,69 @@
+.notiCon_text{
+    display: block;
+}
+.notiCon_cate{
+    margin-bottom: 5px;
+}
+.notiCon_info{
+    margin-top: 15px;
+}
+.notiCon_info>*{
+    margin-right: 20px ;
+}
+.notiContent_Box{
+    padding: 30px 30px 50px;
+    margin-top: 25px;
+    border-top: 2px solid #333;
+    min-height: 600px;
+}
+.notiConBtn{
+    padding-top: 30px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+.notiCon_editB{
+    padding: 10px 20px;
+    background-color: #E0E0E0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 20px;
+
+}
+.notiCon_listB{
+    padding: 10px 20px;
+    background-color: #FFCF00;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* 하단 이전글/다음글 네비 */
+.notiCon_table{
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 160px;
+}
+table.notiCon_table td{
+    padding: 10px 20px;
+}
+.notiCon_label{
+    background-color: #F4F2EF;
+}
+.notiCon_label1{
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #ddd;
+}
+
+.notiCon_label1>a,
+.notiCon_label2>a{
+  color: #000;
+  text-decoration: none;
+}
+
+.notiCon_label2{
+    border-bottom: 1px solid #333;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

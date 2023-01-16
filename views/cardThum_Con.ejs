@@ -1,0 +1,75 @@
+<div class="cardThumCon_wrap ">
+    <div class="titleArea">
+          <div class="w1200">
+              <ul class="pageUtil">
+                  <li><a href=""></a></li>
+                  <li><a href=""></a></li>
+                  <li><a href=""></a></li>
+              </ul>
+              <article class="cardThumCon_topWrap">
+              <div>
+              <h4 class="product_tag f_gray2 f_regular"><%= row.card_info %></h4>
+              <h2 class="card_title f_bold"><%= row.card_name %>&nbsp<%= row.card_category %></h2>
+              <p class="f_gray2"><%= row.card_benefit %></p>
+              </div>
+              <div class="cardImgCon">
+                <img src="<%= row.card_img %>">
+              </div>
+            </article>
+        </div>
+      </div>
+  </div>
+  <section class="product_main w1200">
+    <article class="product_left productdesk">
+      <p class="f_medium">상품안내</p>
+    </article>
+    <article class="product_right">
+      <ul class="product_btn">
+        <li class="product_join" onclick="javascript:location.href='/cardsub?id=<%= row.id %>'"><p class="f_medium">신청하기</p></li>
+      </ul>
+      <div class="product_section"><pre><%= row.card_content %></pre></div>
+      <div class="product_notice">
+        <div class="product_notice_title">
+          <h3>알려드립니다.</h3>
+        </div>
+        <span class="pink_line"></span>
+        <ul class="productinfo">
+          <h3>기타알아두실 사항</h3>
+          <li class="f_gray1">계약체결전 카드상품별 연회비, 이용조건 등에 관한 상세사항은 상품설명서, 약관, 및 홈페이지를 확인하시기 바랍니다.</li>
+          <li class="f_gray1">카드이용시 제공되는 캐시백 등 카드관련 부가서비스는 다음과 같은 경우가 아니면 변경할 수 없습니다. (단, 회원의 권익을 증진하거나 
+            부담을 완화하는 경우는 제외합니다.) <br>
+            &nbsp① 부가서비스와 관련된 제휴업체 또는 KDB산업은행의 휴업,도산,경영위기, 천재지변, 금융환경의 급변, 또는 그밖에 준하는 사유에 따른 
+            불가피한 변경<br>
+            &nbsp② KDB산업은행이 부가서비스 유지를 위해 노력했음에도 불구하고 제휴업체가 일방적으로 부가서비스 변경을 통보 함에 따른 불가피한 
+            변경. 다만, 제휴업체를 통해 동종의 유사한 부가서비스 제공이 가능한 경우는 제외<br>
+            &nbsp③ 카드의 신규 출시*이후 출시 당시의 부가서비스를 축소변경하지 않고 3년이상 경과하였고, 현재의 부가서비스를 유지할 경우 해당 상품의 
+            우익성 유지가 어려운 경우의 변경</li>
+          <li class="f_gray1">* KDB Choice체크카드 - 2015년 10월 출시</li>
+          <li class="f_gray1">- 부가서비스를 변경하는 경우 변경사유, 변경내용 등을 사유발생 즉시 홈페이지, 이용대금명세서, 우편서신, 전자우편(E-MAIL) 중 2가지 
+            이상의 방법으로 고지하여 드립니다. 특히, 카드의 신규출시 이후 출시 당시의 부가서비스를 축소변경하지 않고 3년이상 경과하였고, 
+            현재의 부가서비스를 유지할 경우 해당상품의 수익성 유지가 어려운 경우(위 ③ 경우)에는 부가서비스 변경일 6개월 이전부터는 
+            이용대금명세서, 우편서신, 전자우편(E-MAIL), 휴대폰 문자메세지 서비스 중 어느 하나의 방법으로 매월 고지하여 드립니다.</li>
+        </ul>
+      </div>
+    </article>
+    <article class="product_protect">
+      <div class="protect_right">
+        <p>예금자보호</p>
+        <p class="f_gray2 f_medium">이 예금은 예금자보호법에 따라 예금보험공사가 보호하되, 보호한도는 본 은행에 있는 귀하의 모든 예금보호 대상 금융상품의 원금과
+          소정의 이자를 합하여 1인당”최고 5천만원”이며, 5천만원을 초과하는 나머지 금액은 보호하지 않습니다.</p>
+      </div>
+      <div class="protect_left">
+      </div>
+  
+    </article>
+  </section>
+  <article class="prodect_confir w1200">
+    <p><span class="f_bold f_gray1">KB저축은행 준법감시인 심의필</span> <span class="f_gray2">제2021-184호(2021.06.17)</span></p>
+    <p><span class="f_bold f_gray1">ISO37001인증기관</span> <span class="f_gray2">(취득일:2018.10.23)</span></p>
+  </article>
+  <div class="notiConBtn cardThumCon_btn">
+    <button class="notiCon_editB f_bold" type="button" name="notiCon_editB" onclick="location.href='/updateC?id=<%= row.id %>'">수정</button>
+    <button class="notiCon_editB f_bold" type="button" name="notiCon_editB" onclick="location.href='/deleteC?id=<%= row.id %>'">삭제</button>
+    <button class="notiCon_listB f_bold" type="button" name="notiCon_listB" onclick="location.href='/cardThum_List'">목록</button>
+    
+</div>

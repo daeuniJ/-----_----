@@ -1,0 +1,223 @@
+.login_wrap{
+  background-color: #F5F5F5;
+}
+
+.login_wrap>.main_title{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.login_inner{
+  padding-bottom: 200px;
+}
+
+.login_topCon{
+  padding: 54px 110px;
+  box-sizing: border-box;
+  margin-bottom: 80px;
+  background-color: #fff;
+}
+
+.login_bottomCon{
+  width: 100%;
+  padding: 80px 84px;
+  box-sizing: border-box;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.login_left{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-end;
+  border-right: 1px solid;
+  padding: 75px 85px 75px 0;
+  box-sizing: border-box;
+}
+
+.leftLogin{
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.certificateLogin1{
+  background-color: #ffcf00;
+}
+
+.certificateLogin2{
+  background-color: #755F48;
+  color: #fff;
+}
+
+.login_right{
+  width: 100%;
+  padding: 75px 0 63px 85px;
+  box-sizing: border-box;
+}
+
+.login_innerTop{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.login_inputWrap{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login_inputWrap>input{
+  width: 300px;
+  height: 45px;
+  border-radius: 10px;
+  border: 2px solid #000;
+  color: #7f7f7f;
+}
+
+.login_btn{
+  flex-shrink: 0;
+  width: 100px; height: 100px;
+  border-radius: 10px;
+  padding: 0;
+  background-color: #E0E0E0;
+  border: 0;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.login_innerBot{
+  display: flex;
+  margin-top: 5px;
+}
+
+.login_innerBot>li{
+  padding-right: 10px;
+  padding-left: 10px;
+  position: relative;
+}
+
+.login_innerBot>li:first-child{
+  padding-left: 0;
+}
+
+.login_innerBot>li::after{
+  content: '';
+  display: block;
+  width: 1px;
+  height: 15px;
+  background-color: #000;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.login_innerBot>li:last-child:after{
+  display: none;
+}
+
+.login_innerBot>li>a{
+  text-decoration: none;
+  color: #000;
+}
+
+/*** 반응형 999px ***/
+@media(max-width: 999px){
+  .login_topCon{
+    padding: 54px 54px;
+  }
+
+  .login_bottomCon{
+    flex-direction: column;
+    padding: 0 80px;
+  }
+
+  .login_left{
+    padding: 75px 0 20px;
+    flex-direction: row;
+    justify-content: center;
+    border-right: 0px;
+    border-bottom: 1px solid;
+  }
+
+  .leftLogin{
+    flex-shrink: 1;
+    height: 80px;
+  }
+
+  .login_right{
+    padding: 20px 0 75px;
+  }
+
+  .login_inputWrap{
+    width: 75%;
+  }
+
+  .login_inputWrap>input{
+    width: 100%;
+    height: 60px;
+  }
+}
+/*** 반응형 999px ***/
+
+
+/*** 반응형 800px ***/
+@media(max-width: 800px){
+  .login_topCon{
+    font-size: 14px;
+  }
+  .leftLogin{
+    width: 200px;
+    height: 60px;
+  }
+}
+/*** 반응형 800px ***/
+
+
+
+
+/*** 반응형 699px ***/
+@media(max-width: 699px){
+
+}
+
+/*** 반응형 699px ***/
+
+
+/*** 반응형 600px ***/
+@media(max-width: 600px){
+  .login_left {
+    padding: 50px 0 20px;
+  }
+  .login_right {
+    padding: 20px 0 50px;
+  }
+}
+/*** 반응형 600px ***/
+
+/*** 반응형 499px ***/
+@media(max-width: 499px){
+  .leftLogin{
+    font-size: 12px;
+  }
+
+  .login_inputWrap>input{
+    height: 45px;
+  }
+
+  .login_innerBot>li>a{
+    font-size: 12px;
+  }
+}
+
+/*** 반응형 499px ***/

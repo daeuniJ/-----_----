@@ -1,0 +1,47 @@
+
+    <div class="titleArea">
+        <div class="w1200">
+            <ul class="pageUtil">
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+            <h2 class="f_bold">상품등록</h2>
+            <form action="/cardeW" method="post" enctype="multipart/form-data" id="cardForm">
+              <table class="write">
+                <tr class="write_cell">
+                  <td class="write_title"><span>*</span>제품명</td>
+                  <td class="write_select"><input type="text" name="card_name" id="card_name"></td>
+                </tr>
+                <tr class="write_cell">
+                    <td class="write_title"><span>*</span>카드종류</td>
+                    <td class="write_select">
+                      <input class="write_radio" type='radio' name='card_cate' value='체크카드' checked/>체크카드
+                      <input class="write_radio" type='radio' name='card_cate' value='신용카드'/>신용카드
+                    </td>
+                  </tr>
+                  <tr class="write_cell">
+                    <td class="write_title"><span>*</span>카드 이미지</td>
+                    <td class="write_select"><input type="file" name="card_img" id="card_img"></td>
+                  </tr>
+                <tr class="write_cell">
+                  <td class="write_title"><span>*</span>카드소개</td>
+                  <td class="write_select"><input type="text" name="card_info" id="card_info" class="cardIfo"></td>
+                </tr>
+                <tr class="write_cell">
+                  <td class="write_title"><span>*</span>제품혜택</td>
+                  <td class="write_select"><input type="text" name="card_benefit" id="card_benefit" class="cardIfo"></td>
+                </tr>
+                <tr class="write_cell write_cont">
+                  <td class="write_title write_cont_td"><span>*</span>내용</td>
+                  <td class="write_select write_cont_td"><textarea name="card_cont" id="card_cont" cols="30" rows="10"></textarea></td>
+                </tr>
+              </table>
+              <div class="write_btn_wrap">
+                <a href="notiConPage"><button type="reset" class="write_btn f_bold write_cancle" onclick="javascript:location.href='/cardThum_List'">취소</button></a>
+                <input class="write_btn cardThumW_btn f_bold" type="submit" name="upload" id="cWhrite_submitBtn" value="등록">
+              </div>
+            </form>
+      </div>
+    </div>
+    <script src="js/cardThum_write.js"></script>

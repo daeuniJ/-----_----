@@ -1,0 +1,220 @@
+.m_bottom30{
+  margin-bottom: 30px;
+}
+
+ul.tabs{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.tab_link{
+  flex: 1;
+  font-size: 24px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  cursor: pointer;
+}
+
+.tab_link.on{
+  background-color: #FFCF00;
+}
+
+.calcul_inner>div{
+  display: none;
+}
+
+.calcul_inner>div.on{
+  display: block;
+}
+
+
+.calcul_info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #EFECEC;
+  padding: 15px 40px;
+  box-sizing: border-box;
+}
+
+ul.calcul_info{
+  list-style-type: disc;
+  font-size: 18px;
+}
+div.calcul_info{
+  padding: 20px 40px;
+}
+
+.calcul_info>p{
+  font-size: 18px;
+}
+
+.calcul_con>div{
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.depositRate{
+  margin-bottom: 24px;
+}
+
+.calcul_con>div>label{
+  display: block;
+  font-size: 24px;
+}
+
+.calcul_con input{
+  width: 244px;
+  padding: 12px 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 1px solid;
+  margin-right: 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#depositAmount{
+  width: 854px;
+}
+
+.calcul_con div span{
+  font-size: 24px;
+}
+
+.calcul_con input[type=button]{
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 0;
+}
+
+.calcul_con div>div{
+  display: flex;
+  align-items: center;
+}
+
+.calcul_con div:nth-child(3) span{
+  margin-right: 80px;
+}
+
+.depositRate .simpleInterest{
+  flex-shrink: 0;
+  margin-right: 0;
+  width: 180px;
+  height: 60px;
+  background-color: #E0E0E0;
+}
+
+.calculating{
+  width: 250px;
+  height: 60px;
+  background-color: #E0E0E0;
+}
+
+.btnWrap{
+  display: flex;
+  justify-content: center;
+}
+
+.reset{
+  background-color: #755F48;
+  color: #fff;
+}
+
+.calcul_result{
+  padding-bottom: 130px;
+}
+
+.calcul_result>h3{
+  font-size: 30px;
+  margin-bottom: 22px;
+}
+
+.result_con{
+  width: 100%;
+  height: 200px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 23px 53px;
+  box-sizing: border-box;
+}
+
+.result_info{
+  list-style-type: disc;
+}
+
+.result_info>li{
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.result_info>li:last-child{
+  margin-bottom: 0;
+}
+
+
+/*** 반응형 1024px ***/
+@media (max-width: 1024px) {
+  .calcul_info{
+    font-size: 16px;
+  }
+
+  .calcul_info>p{
+    font-size: 16px;
+  }
+}
+
+/*** 반응형 1024px ***/
+
+
+/*** 반응형 950px ***/
+@media (max-width: 950px) {
+  .calcul_con div:first-child>div{
+    justify-content: space-between;
+  }
+
+  #depositAmount{
+    width: 90%;
+    margin-right: 0;
+  }
+  
+}
+
+/*** 반응형 950px ***/
+
+
+/*** 반응형 600px ***/
+@media (max-width: 595px) {
+  ul.tabs{
+    flex-direction: column;
+  }
+  .tab_link{
+    width: 100%;
+    padding: 10px 0;
+    box-sizing: border-box;
+  }
+
+  .calcul_con div>div{
+    flex-wrap: wrap;
+  }
+
+  .depositRate .simpleInterest{
+    margin-top: 10px;
+  }
+
+  .result_con{
+    height: 100%;
+    padding: 10px 50px;
+  }
+}
+
+/*** 반응형 600px ***/

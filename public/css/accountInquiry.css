@@ -1,0 +1,191 @@
+.inquiryWrap{
+  width: 100%;
+  height: 100px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.inquiryCon{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 110px;
+}
+
+.inqInputWrap{
+  height: 40px;
+}
+
+.inqInputWrap input{
+  padding: 0 5px;
+  height: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 20px;
+}
+
+.inqInputWrap #account_pw{
+  margin-right: 0;
+}
+
+
+.inquiryBtn{
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #ffcf00;
+  text-align: center;
+  line-height: 40px;
+  padding: 0;
+  cursor: pointer;
+  border: 1px solid #ddd;
+}
+
+.resultWrap{
+  margin-bottom: 150px;
+}
+
+.result_tit{
+  width: 100%;
+  border-bottom: 2px solid #000;
+}
+
+.result_tit>h3{
+  margin-bottom: 10px;
+}
+
+.result_info1{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.result_info1>p{
+  color: #7F7F7F;
+}
+
+.result_info2 table{
+  table-layout: fixed;
+}
+
+.result_info2 thead{
+  border-bottom: 1px solid rgba(77, 77, 77, 0.5);
+}
+
+
+.result_info2 tr{
+  height: 50px;
+  line-height: 50px;
+}
+
+.result_info2 th,
+.result_info2 td{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.result_info2 tbody{
+  text-align: center;
+}
+
+.warnWrap{
+  width: 100%;
+  background-color: #FBFBFB;
+  border: 1px solid #d2d2d2;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-bottom: 90px;
+}
+
+.warnWrap h3{
+  margin-bottom: 10px;
+}
+
+/* 반응형 900px */
+@media(max-width: 900px){
+  .inquiryWrap{
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .inquiryCon{
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .inqInputWrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .inqInputWrap input{
+    margin-right: 0;
+    padding: 5px 20px;
+  }
+
+  .resultWrap{
+    margin-bottom: 100px;
+  }
+
+
+  .result_info1>p{
+    font-size: 12px;
+  }
+
+  .result_info2{
+    font-size: 12px;
+  }
+}
+/* 반응형 900px */
+
+/* 반응형 500px */
+@media(max-width: 500px){
+  .result_info2{
+    font-size: 9px;
+  }
+
+
+/* 반응형 500px */
+
+
+
+
+/* 반응형 400px */
+@media(max-width: 400px){
+  .inquiryWrap{
+    padding: 10px;
+  }
+
+  .inqInputWrap input{
+    padding: 5px;
+    font-size: 8px;
+  }
+
+  .inquiryBtn{
+    width: 70px;
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
+  }
+  
+  .resultWrap{
+    margin-bottom: 50px;
+  }
+
+
+}
+/* 반응형 400px */

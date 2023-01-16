@@ -1,0 +1,91 @@
+    <div class="titleArea">
+      <div class="w1200">
+          <ul class="pageUtil">
+              <li><a href=""></a></li>
+              <li><a href=""></a></li>
+              <li><a href=""></a></li>
+          </ul>
+          <h2 class="f_bold">고객상품신청</h2>
+          <form method="get">
+            <input type="hidden" name="id" value="<%= row.id %>">
+            <table class="write">
+              <tr class="write_cell">
+                <td class="write_title"><span>*</span>성명</td>
+                <td class="write_select">
+                <input type="text" name="cardname" id="name" maxlength="30" value="<%= row.name %>" disabled>
+                </td>
+              </tr>
+              <tr class="write_cell">
+                <td class="write_title"><span>*</span>전화번호</td>
+                <td class="write_select"><input type="text" name="tellnum" id="tellnum" maxlength="50" value="<%= row.tellnum%>" disabled></td>
+              </tr>
+              <tr class="write_cell">
+                <td class="write_title"><span>*</span>결제정보</td>
+                <td class="write_select">
+                  <%= row.payinfo%>
+                  <span> 계좌번호:<%= row.bankaccount%>  </span>              
+              </tr>
+              <tr class="write_cell">
+                <td class="write_title"><span>*</span>결제일</td>
+                <td class="write_select">
+                  매 월
+                  <input type="hidden" value="<%= row.accountDay%>" id="accountday">
+                  <input class="write_radio" type='radio' name='account_day' value="1일" disabled/>1일
+                  <input class="write_radio" type='radio' name='account_day' value='5일' disabled/>5일
+                  <input class="write_radio" type='radio' name='account_day' value='10일' disabled/>10일
+                  <input class="write_radio" type='radio' name='account_day' value='15일' disabled/>15일
+                  <input class="write_radio" type='radio' name='account_day' value=''disabled/>지정 선택
+                  <input type="number" id="accountSelect" name="reserv_up" value="" disabled="disabled">
+                </td>
+              </tr>
+              <tr class="write_cell">
+                <td class="write_title cardaddress"><span>*</span>카드 수령 주소</td>
+                <td class="write_select">
+                  <input type="text" class="cardadd addnum" name="postcode" id="sample6_postcode" placeholder="우편번호"  value="<%= row.postcode%>" disabled>
+                  <input type="button" class="addsearch" value="우편번호 찾기"><br>
+                  <input type="text" class="cardadd address" name="address" id="sample6_address" placeholder="주소"  value="<%= row.address%>" disabled><br>
+                  <input type="text" class="cardadd address" name="detailAddress" id="sample6_detailAddress" placeholder="상세주소"  value="<%= row.detailAddress%>" disabled>
+                  <input type="hidden" class="addsearch adddetails"  id="sample6_extraAddress" placeholder="참고항목">
+                </td>
+              </tr>
+              <tr class="write_cell">
+                <td class="write_title"><span></span>교통카드 신청 여부</td>
+                <td class="write_select">
+                <input type="hidden" value="<%= row.transcard%>" id="transcard">
+                <input class="write_radio" type='radio' name='transportationCard' value="신청" disabled/>신청
+                <input class="write_radio" type='radio' name='transportationCard' value="미신청" disabled/>미신청
+              </td>
+              </tr>
+              <tr class="write_cell">
+                <td class="write_title card_Limit"><span> 이용한도</span>
+                  <h4 class="f_gray2 f_regular card_notice">신청자의 신용등급에 따라서 <br>
+                  한도가 제한 될 수 있습니다.</h4>
+                </td>
+                <div></div>
+                <td class="write_select">
+                  1 회 <input type="number" name="oncelimit" class="cardlimit" value="<%= row.oncelimit%>" disabled>
+                  일 일 <input type="number" name="daylimit" class="cardlimit" value="<%= row.daylimit%>" disabled>
+                  월간 <input type="number" name="monthlimit" class="cardlimit" value="<%= row.monthlimit%>" disabled>
+                </td>
+              </tr>
+              <tr class="write_cell">
+                <td class="write_title"><span></span>자동납부</td>
+                <td class="write_select">
+                  <label><input type="checkbox" class="paycheck" name="tellPay" value="checked" <%= row.tellPay %> disabled> 통신요금</label>
+                  <label><input type="checkbox" class="paycheck" name="gasPay" value="checked" <%= row.gasPay %> disabled> 도시가스</label>
+                  <label><input type="checkbox" class="paycheck" name="elPay" value="checked" <%= row.elPay %> disabled> 전기요금</label>
+                  <label><input type="checkbox" class="paycheck" name="aptPay" value="checked" <%= row.aptPay %> disabled> 아파트 관리비</label>
+              </td>
+              </tr>
+            </table>
+          </form>
+          <div class="write_btn_wrap">
+            <button class="write_btn f_bold write_cancle notapproval" onclick="javascript:location.href='/notapproval?id=<%= row.id %>'">발급불가</button>
+            <button class="write_btn f_bold write_cancle approval" onclick="javascript:location.href='/approval?id=<%= row.id %>'">발급승인</button>
+          </div>
+          
+    </div>
+  </div>
+  <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+  <script src="js/address.js"></script>
+  <script src="js/cardsub.js"></script>

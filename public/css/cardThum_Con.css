@@ -1,0 +1,56 @@
+.cardThumCon_wrap{
+    background-color: #EFECEC;
+    padding-bottom: 130px;
+}
+.cardThumCon_btn{
+    border-top:none;
+    margin-bottom: 160px;
+}
+.cardThumCon_topWrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cardThumCon_topWrap>div:first-child{
+    width: 80%;
+}
+.cardThumCon_topWrap>div:last-child{
+    width: 20%;
+}
+.cardThumCon_topWrap img{
+    width: 320px;
+    height: 200px;
+    position: absolute;
+    top: 104px;
+    right: 0;
+}
+.card_title{
+    padding: 25px 0 10px;
+}
+.product_join{
+    cursor: pointer;
+}
+
+/*** 반응형 1000px ***/
+
+@media (max-width: 1000px) {
+    .cardThumCon_topWrap img{
+        top: 250px;
+        left: 20px;
+    }
+    .cardThumCon_wrap{
+        padding-bottom: 270px;
+    }
+}
+  
+  /*** 반응형 1000px ***/
+
+/*** 반응형 450px ***/
+
+@media (max-width: 450px) {
+    .cardThumCon_topWrap img{
+        width: 71.111vw;
+        height: 44.444vw;
+    }
+}
+  
+  /*** 반응형 450px ***/

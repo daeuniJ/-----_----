@@ -1,0 +1,62 @@
+<div class="titleArea">
+    <div class="w1200">
+        <ul class="pageUtil">
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+        </ul>
+        <h2 class="f_bold">카드신규</h2>
+  </div>
+</div>
+ <div class="cardThumList_wrap">
+        <div class="inner_cardThumList w1200">
+            <div class="cardThumList_left">
+                <input onkeyup="filter()" class="cardSearch" id="value" type="text" placeholder="상품명을 입력하세요.">
+                <div class="cardcate_wrap">
+                    <p class="f_medium">카드유형</p>
+                    <ul>
+                        <li>
+                            <input type="radio" class="card_cate" name="card_cate" value="전체" id="card_cate_1" checked>
+                            <label for="card_cate">전체</label>
+                        </li>
+                        <li>
+                            <input type="radio" class="card_cate" value="신용" name="card_cate" id="card_cate_2">
+                            <label for="card_cate">신용</label>
+                        </li>
+                        <li>
+                            <input type="radio" class="card_cate" value="체크" name="card_cate" id="card_cate_3">
+                            <label for="card_cate">체크</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cardThumList_right">
+                <p class="f_regular">총 <span class="f_bold" id="cardThum_tol"></span>건</p>
+                <% rows.forEach((row,index) =>{ %> 
+                <ul class="cardItom_wrap">
+                    <li class="card_li cardItem">
+                        <div class="cardImg">
+                            <img src="<%= row.card_img %>">
+                        </div>
+                        <div class="cardInfo">
+                            <div><h3 class="f_medium cardName"><%= row.card_name %>&nbsp;</h3><h3 class="cardCategory"><%= row.card_category %></h3></div>
+                            <p class="f_regular"><%= row.card_info %></p>
+                            <h4 class="f_regular"><pre><%= row.card_benefit %></pre></h4>
+                        </div>
+                        <div class="cardList_Btn">
+                            <button type="button" class="cardReq_Btn" onclick="javascript:location.href='/cardsub?id=<%= row.id %>'">카드신청</button>
+                            <button type="button" class="cardDet_Btn" onclick="javascript:location.href='/cardThum_Con?id=<%= row.id %>'">자세히보기</button>
+                        </div>
+                    </li>
+                </ul>
+                <% }); %>
+            </div>
+        </div>
+        <div class="list_writeBtn w1200">
+            <input type="button" value="상품 등록" class="list_writeBtn_check" id="card_ap" onclick="javascript:location.href='/cardThum_write'">
+            </div>
+    </div>
+    <div id="topBtn" class="f_gray2"><h4>TOP</h4></div>
+
+
+    <script src="js/cardThum_List.js"></script>

@@ -1,0 +1,163 @@
+.join1_wrap{
+  background-color: #F5F5F5;
+}
+
+.join1_inner{
+  background-color: #fff;
+  padding-bottom: 140px;
+}
+
+.join1_inner>.main_title{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.join1_innerCon{
+  width: 630px;
+  margin: 0 auto;
+}
+
+#join1_form>div{
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+
+#join1_form>.join_title{
+  padding-top: 0;
+}
+
+.join_title>h3{
+  font-size: 24px;
+}
+
+#join1_form label{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
+
+#join1_form label>span{
+  color: #ffcf00;
+}
+
+.survice_con{
+  padding-top: 50px;
+}
+
+#join1_form input[type=checkbox] {
+  all: unset;
+}
+#join1_form input[type=checkbox] + label { 
+  cursor: pointer; 
+  padding-left: 35px;
+  background-repeat: no-repeat;
+  background-image: url('../img/join1Page/check-mark_before.png');
+  background-position: left center;
+  background-size: 27px 27px;
+  background-repeat: no-repeat;
+  transition: all .4s;
+}
+
+#join1_form input[id="allCheck"]:checked + label{
+  background-image: url('../img/join1Page/check-mark_after.png');
+}
+
+#join1_form input[id="surviceCheck"]:checked + label{
+  background-image: url('../img/join1Page/check-mark_after.png');
+}
+
+#join1_form input[id="privacyCheck"]:checked + label{
+  background-image: url('../img/join1Page/check-mark_after.png');
+}
+
+#join1_form input[id="marketCheck"]:checked + label{
+  background-image: url('../img/join1Page/check-mark_after.png');
+}
+
+.joinTextarea{
+  resize: none;
+  font-size: 8px;
+	font-family: 'Noto Sans KR', sans-serif;
+  /* word-wrap: break-word; */
+}
+
+
+.join1_bot{
+  margin-top: 50px;
+}
+
+.join1_bot>h4{
+  font-size: 16px;
+}
+
+.join1_bot>p{
+  font-size: 12px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.join1_bot .certi_box{
+  display: flex;
+}
+
+.join1_bot .certi_box>li{
+  flex: 1;
+  border: 1px solid #7f7f7f;
+  padding: 28px 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.join1_bot .certi_box>li>a{
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  padding-top: 70px;
+  background-position: top center;
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.join1_bot .certi_box>li:first-child>a{
+  background-image: url(../img/join1Page/smartphone-call.png);
+}
+
+.join1_bot .certi_box>li:last-child>a{
+  background-image: url(../img/join1Page/security.png);
+}
+
+.mgtop_50{
+  margin-top: 50px;
+}
+
+.mgtop_115{
+  margin-top: 115px;
+}
+
+#join1_form .join1Btn_wrap{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.join1Btn_wrap>.join1_btn{
+  width: 150px;
+  padding: 20px 40px;
+  border: 0;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  background-color: #755F48;
+}
+
+@media (max-width: 640px){
+  .join1_innerCon{
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+}

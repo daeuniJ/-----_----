@@ -1,0 +1,284 @@
+.list_searchBox{
+    width: 100%; 
+    display: flex;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    background-color: #fbfbfb;
+    border-radius: 4px;
+}
+.list_searchBox>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+.list_searchBox>div>div{
+    width: 50%;
+}
+select.list_ST{
+    background-image: url(../img/sub_noticeList/btn_select.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-color: #fff;
+    padding: 0 45px 0 18px;
+    appearance: none;
+    width: 180px ; height: 40px;
+    outline: none;
+
+}
+.list_col{
+    margin-right: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.list_searchKeyword{
+    width: 100%; height: 40px;
+    outline: none;
+}
+#list_btn{
+    display: inline-block;
+    min-width: 100px;
+    height: 40px;
+    padding: 0 14px;
+    background-color: #FFCF00;
+    vertical-align: middle;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.list_searchBox_left{
+    display: flex;
+    justify-content: space-between;
+}
+.list_searchBox_right{
+    display: flex;
+    justify-content: space-between;
+}
+/* 날짜 확인용 */
+.displystyle{
+    display: none;
+}
+
+
+/* 리스트 정보확인 박스 */
+.listTop{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+.list_totalP{
+    display: flex;
+    line-height: 40px;
+    padding-left: 35px;
+    background-image: url(../img/sub_noticeList/ico_totalList.png);
+    background-repeat: no-repeat;
+    background-position: 0 center;
+}
+.listTop strong{
+    color: #000;
+}
+
+.list_order{
+    display: flex;
+}
+.list_order>ul{
+    display: flex;
+    vertical-align: middle;
+}
+
+.list_order>ul>li{
+    line-height: 40px;
+    padding: 0 5px;
+    position: relative;
+}
+.notiTorder{
+    appearance: none;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.list_order>ul>li:first-child:after{
+    display: block;
+    content: '';
+    width: 1px; height: 15px;
+    background-color: #ddd;
+    position: absolute;
+    top: 32%; right: 0;
+}
+.list_order>ul>li:first-child>a{
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+.list_order>ul>li:last-child>a{
+    text-decoration: none;
+    font-size: 16px;
+}
+.list_viewPageBtn{
+    display: inline-block;
+    width: 58px; height: 40px;
+    /* padding: 0 14px; */
+    background-color: #755F48;
+    vertical-align: middle;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+}
+
+
+
+/* 리스트 */
+.listTable{
+    width: 100%;
+}
+
+table.listTable thead th{
+    border-top: 2px solid #333;
+    background-color: #F4F2EF;
+    padding: 16px 10px;
+    text-align: center;
+}
+table.listTable td{
+    padding: 20px 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+.listTable_title{
+    text-align: left !important;
+}
+.listTable_title>a{
+    text-decoration: none;
+    color: #000;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+/* 페이지 버튼 */
+.list_paging{
+    margin-top: 30px;
+    text-align: center;
+    letter-spacing:-6px;
+    padding-bottom: 160px;
+}
+.list_paging>.pageBtn{
+    display: inline-block;
+    width: 35px; height: 35px;
+    letter-spacing: 0;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    margin: 0 5px;
+}
+.list_paging>.page_first{
+    background-image: url(../img/sub_noticeList/btn_page.png);
+    background-position: 0 0;
+    cursor: pointer;
+}
+.list_paging>.page_prev{
+    background-image: url(../img/sub_noticeList/btn_page.png);
+    background-position: -33px 0;
+    cursor: pointer;
+}
+.list_paging>.page_next{
+    background-image: url(../img/sub_noticeList/btn_page.png);
+    background-position: -65px 0;
+    cursor: pointer;
+}
+.list_paging>.page_last{
+    background-image: url(../img/sub_noticeList/btn_page.png);
+    background-position: right 0;
+    cursor: pointer;
+}
+.list_paging>ol{
+    display: inline-block;
+    margin: 0 40px;
+}
+.list_paging>ol>li{
+    width: 42px; height: 35px;
+    display: inline-block;
+    vertical-align: bottom;
+    letter-spacing: 0;
+}
+.list_paging>ol>li>a{
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: #7f7f7f;
+    line-height: 35px;
+}
+.list_paging>ol>li>a::after{
+    display: block;
+    content: '';
+    border-bottom: 1px solid #FFCF00;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+}
+.list_paging>ol>li>a:hover:after{
+    transform: scaleX(1);
+}
+.list_paging>ol>li>a:hover{
+    color: #FFCF00;
+}
+
+.list_writeBtn{
+    text-align: end;
+
+}
+.list_writeBtn_check{
+    background-color: #fbfbfb;
+    border: 1px solid #ddd;
+    border-radius: 10px;line-height: 30px;
+    margin: 10px 0;
+    padding-left: 6px !important;
+    cursor: pointer;
+}
+.list_paddingb{
+    padding-bottom: 150px;
+}
+
+/*** 반응형 800px ***/
+@media(max-width: 800px) {
+    .list_searchBox_left{
+        width: 100%;
+    }
+    .list_searchBox>div>div{
+        width: 100%;
+    }
+    .list_searchBox_right{
+        width: 100%;
+    }
+    #list_searchCategory{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    #list_searchCondition{
+        width: 100%;
+        margin-right: 0 ;
+    }
+    .list_searchBox_right>div{
+        width: 72%;
+    }
+    #list_btn{
+        width: 25%;
+    }
+
+
+  }
+  /*** 반응형 800px ***/

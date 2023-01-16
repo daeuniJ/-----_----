@@ -1,0 +1,58 @@
+.cardinfo{
+  padding-bottom: 40px;
+}
+.cardlimit{
+  display: block;
+}
+.card_Limit{
+  height: 185px;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
+}
+.card_notice{
+  padding: 0 5px 0 26px; 
+}
+.cardadd{
+  margin-bottom: 10px;
+}
+.cardadd:first-child{
+  margin-top: 10px;
+}
+.write_select>.addnum{
+  width: 150px;
+}
+.write_select>.addsearch{
+  width: 100px;
+  padding-left:0
+}
+.write_select>.address{
+  width: 250px;
+}
+.cardaddress{
+  height: 150px;
+}
+.pay_select{
+  width: none;
+}
+.pay{
+  border-radius: 4px;
+  width: 150px;
+  height: 34px;
+  border: 1px solid #7F7F7F;
+  margin-right: 10px;
+}
+#accountSelect{
+  width: 100px;
+}
+table.listTable .present{
+  padding: 12px 28px;
+  border-radius: 10px;
+  background-color: #755F48;
+  color: #fff;
+}
+
+@media (max-width:450px) {
+  .write_title{width: 35%;}
+  
+}

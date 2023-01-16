@@ -1,0 +1,81 @@
+<title>KB 저축은행 회원가입</title>
+<div class="join2_wrap">
+  <div class="join2_inner w1200">
+    <h2 class="main_title">회원가입</h2>
+    <div class="join2_con">
+      <div class="join2_info">
+        <h3>회원정보 입력</h3>
+        <p>저희 KB저축은행은 회원님의 정보를 소중하게 생각하며, 개인정보보호를 위해 최선을 다할 것을 약속 드립니다.</p>
+        <p>가입하신 정보는 회원님의 동의 없이 공개되지 않으며, 개인정보 취급방침에 의해 보호를 받습니다.</p>
+        <p>등록하신 계좌는 간편서비스 대상계좌로 등록이 됩니다. 이후 간편조회 서비스를 통해 잔액 및 거래내역을 쉽게 조회할 수 있습니다.</p>
+      </div>
+      <form class="joinform" id="joinform" name="joinform" method="post" action="/joininfo"
+        onsubmit="return checkAll()">
+        <div class="input_wrap input_wrap1">
+          <input type="text" name="user_name" id="user_name" placeholder="성명">
+          <input type="text" name="user_birth" id="user_birth" placeholder="생년월일, 숫자만 입력" maxlength="8"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+        </div>
+        <div class="radioboxs">
+          <input type="radio" name="gener" id="normalAccount" value="보통예금계좌" checked>
+          <label for="normalAccount">보통예금계좌</label>
+          <input type="radio" name="gener" id="limitAccount" value="한도제한계좌">
+          <label for="limitAccount">한도제한계좌</label>
+          <input type="radio" name="gener" id="savingAccount" value="저축계좌">
+          <label for="savingAccount">저축계좌</label>
+        </div>
+        <div class="input_wrap input_wrap2">
+          <input type="text" name="account_id" id="account_id" placeholder="계좌 번호 입력, 숫자만 12자리 입력" maxlength="12"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+          <% let accountIdes = []; %>
+          <% rows.forEach((row, index)=>{ %>
+          <% accountIdes.push(row.account_id); %>
+          <% }); %>
+          <input type="button" value="계좌 번호 중복 확인"
+            onclick="confirmAccId(<% for(i = 0; i < accountIdes.length; i++){ %> '<%= accountIdes[i] %>',<% } %>)">
+          <input type="hidden" name="accountCheck" id="accountCheck" value="0">
+          <input type="password" name="account_pw" id="account_pw" placeholder="계좌 비밀번호, 숫자만 입력" maxlength="4"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+        </div>
+        <div class="input_wrap input_wrap3">
+          <input type="text" name="user_id" id="user_id" placeholder="아이디 5~12자의 영문 대/소문자, 숫자 조합">
+          <% let userIdes = []; %>
+          <% rows.forEach((row, index)=>{ %>
+          <% userIdes.push(row.user_id); %>
+          <% }); %>
+          <input type="button" value="아이디 중복 확인"
+            onclick="confirmId(<% for(i = 0; i < userIdes.length; i++){ %> '<%= userIdes[i] %>',<% } %>)">
+          <input type="hidden" name="idCheck" id="idCheck" value="0">
+        </div>
+        <div class="input_wrap input_wrap4">
+          <input type="password" name="user_pw" id="user_pw" placeholder="비밀번호 8~16자 영문 대/소문자, 숫자">
+        </div>
+        <div class="input_wrap input_wrap5">
+          <input type="password" name="user_pwCheck" id="user_pwCheck" placeholder="비밀번호 확인">
+        </div>
+        <div class="input_wrap">
+          <input type="text" name="zipCode" id="sample6_postcode" placeholder="우편번호" maxlength="5"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+          <input type="button" value="우편번호 찾기" onclick="sample6_execDaumPostcode()">
+        </div>
+        <div class="input_wrap input_wrap6">
+          <input type="text" name="user_address" id="sample6_address" placeholder="기본주소 입력">
+          <input type="text" name="user_addressMore" id="sample6_detailAddress" placeholder="상세주소 입력">
+          <input type="hidden" id="sample6_extraAddress" placeholder="참고항목">
+        </div>
+        <div class="input_wrap input_wrap7">
+          <input type="text" name="user_phoneNum" id="user_phoneNum" placeholder="휴대전화 번호, 숫자만 입력" maxlength="13"
+            oninput="autoHyphen(this)" />
+          <input type="text" name="user_mail" id="user_mail" placeholder="이메일 주소">
+        </div>
+        <div class="btn_wrap">
+          <input type="button" value="취소">
+          <input class="signUp_btn" type="submit" value="회원가입">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script src="js/address.js"></script>
+<script src="js/join2Page.js"></script>

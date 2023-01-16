@@ -1,0 +1,100 @@
+table{
+  width: 100%;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+.write_cell{
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #DDDDDD;
+}
+.write_title{
+  padding: 12px 0;
+  width: 23%;
+  background-color: #F3F2EE;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.write_title>span{
+  padding: 0 5px 0 26px
+}
+.write_select{
+  width: 77%;
+  margin-left: 30px;
+}
+.write_passCk{
+  color: #7F7F7F;
+  display: inline;
+}
+.write_select>input{
+  border-radius: 4px;
+  width: 240px;
+  height: 34px;
+  border: 1px solid #7F7F7F;
+}
+.write_select>input:focus{
+  outline: none;
+}
+input.write_radio{
+  width: initial;
+  height: initial;
+}
+.write_cont{
+  align-items: start;
+}
+.write_cont_td{
+  height: 50vh;
+  display: flex;
+  align-items: flex-start;
+}
+textarea#write_cont {
+  width: 80%;
+  height: 48vh;
+  margin-top: 8px;
+  resize: none;
+}
+textarea:focus{
+  outline: none;
+}
+/* 버튼 */
+.write_btn_wrap{
+  padding: 28px 0 78px 0;
+  display: flex;
+  justify-content: center;
+}
+.write_btn{
+  padding: 10px 21px;
+  box-sizing: border-box;
+  border: 0px;
+  border-radius: 10px;
+  background-color: #FFCF00;
+  cursor: pointer;
+}
+.write_cancle{
+  background-color: #E0E0E0;
+  margin-right: 20px;
+}
+/* 업로드 input */
+#upload_date{
+  width: 20%;
+  padding-left: 10px;
+  margin-left: 10px;
+}
+@media (max-width:700px) {
+  .write_title>span {
+    padding: 0 5px 0 5px;
+  }
+  .write_title {
+    width: 20%;
+  }
+  .write_passCk {
+    display: block;
+  }
+  .write_corr{
+    margin: 5px 0px 5px 30px;
+  }
+  .title_corr{
+    height: 65px;
+  }
+}

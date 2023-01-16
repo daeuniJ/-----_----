@@ -1,0 +1,83 @@
+<div class="titleArea">
+  <div class="w1200">
+    <ul class="pageUtil">
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+    </ul>
+    <h2 class="f_bold">공지사항</h2>
+  </div>
+</div>
+<section class="w1200">
+  <article class="notiCon_text">
+    <p class="notiCon_cate f_gray2"><%= row.cate %></p>
+    <h3 class="notiCon_tit f_medium"><%= row.title %></h3>
+    <div class="notiCon_info f_gray2">
+      <span>작성일: <%= row.date %></span>
+      <span>조회수: <%= row.view %></span>
+    </div>
+    <div class="notiContent_Box">
+      <p><pre><%= row.cont %></pre></p>
+    </div>
+  </article>
+  <div class="notiConBtn">
+    <button class="notiCon_editB f_bold" type="button" name="notiCon_editB"
+      onclick="javascript:location.href='/notUp?id=<%= row.id %>'">수정</button>
+    <button class="notiCon_editB f_bold" type="button" name="notiCon_editB"
+      onclick="javascript:location.href='/deleteNoti?id=<%= row.id %>'">삭제</button>
+    <button class="notiCon_listB f_bold" type="button" name="notiCon_listB"
+      onclick="location.href='/sub_noticeList'">목록</button>
+  </div>
+</section>
+<section class="w1200">
+  <table class="notiCon_table">
+    <colgroup>
+      <col style="width: 20%;">
+      <col style="width: auto;">
+    </colgroup>
+    <tbody>
+      <% if (row1){ %>
+      <tr>
+        <td class="notiCon_label notiCon_label1">
+          <p>이전글</p>
+        </td>
+        <td class="notiCon_label1">
+          <a href="/notiConPage?id=<%= row1.id %>">
+            <%= row1.title %>
+          </a>
+        </td>
+      </tr>
+      <% } else { %>
+      <tr>
+        <td class="notiCon_label notiCon_label1">
+          <p>이전글</p>
+        </td>
+        <td class="notiCon_label1">
+          이전글이 없습니다.
+        </td>
+      </tr>
+      <% } %>
+      <% if (row2){ %>
+      <tr>
+        <td class="notiCon_label notiCon_label2">
+          <p>다음글</p>
+        </td>
+        <td class="notiCon_label2">
+          <a href="/notiConPage?id=<%= row2.id %>">
+            <%= row2.title %>
+          </a>
+        </td>
+      </tr>
+      <% } else { %>
+      <tr>
+        <td class="notiCon_label notiCon_label2">
+          <p>다음글</p>
+        </td>
+        <td class="notiCon_label2">
+          다음글이 없습니다.
+        </td>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+</section>

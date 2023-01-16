@@ -1,0 +1,72 @@
+<title>KB저축은행 계좌조회</title>
+<div class="titleArea">
+  <div class="w1200">
+    <ul class="pageUtil">
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+    </ul>
+    <h2 class="f_bold">계좌조회</h2>
+  </div>
+</div>
+<div class="inquiry_sec w1200">
+  <div class="inquiryWrap">
+    <form class="inquiryCon" name="inquiryform" method="post" action="/accountInquiryinfo"
+      onsubmit="return checkInquriy()">
+      <div class="inqInputWrap">
+        <input type="text" name="user_name" id="user_name" placeholder="성명">
+        <input type="text" name="user_birth" id="user_birth" placeholder="생년월일, 숫자만 입력" maxlength="10">
+        <input type="password" name="account_pw" id="account_pw" placeholder="계좌 비밀번호, 숫자만 입력" maxlength="4"
+          oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+      </div>
+      <input class="inquiryBtn" type="submit" value="검색">
+    </form>
+  </div>
+  <div class="resultWrap">
+    <div class="resultCon">
+      <div class="result_tit">
+        <h3>입/출금계좌</h3>
+      </div>
+      <div class="result_info1">
+        <p>조회건수 ㅣ 총 <%= result.length %>건</p>
+        <p class="nowTime">기준일시 : 현재시각</p>
+      </div>
+      <div class="result_info2">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" style="width:8.3333%">성명</th>
+              <th scope="col" class="accountName" style="width:41.6666%">계좌명</th>
+              <th scope="col" style="width:33.3333%">계좌번호</th>
+              <th scope="col" style="width:16.6666%">개설일자</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for(i = 0; i < result.length; i++){ %>
+            <tr>
+              <td><%= result[i].user_name %></td>
+              <% if(result[i].account_type == '보통예금계좌'){ %>
+              <td>[보통예금계좌]KB저축은행보통예금</td>
+              <% } %>
+              <% if(result[i].account_type == '한도제한계좌'){ %>
+              <td>[한도제한]KB저축은행입출금계좌</td>
+              <% } %>
+              <% if(result[i].account_type == '저축계좌') { %>
+              <td>[저축계좌]KB저축은행정기적금</td>
+              <% }; %>
+              <td><%= result[i].account_id %></td>
+              <td><%= result[i].create_time %></td>
+            </tr>
+            <% }; %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="warnWrap">
+    <h3>주의하세요!</h3>
+    <p>타인의 주민등록번호를 부정하게 사용하는 경우 관련법에 의거하여 처벌 받을 수 있습니다.</p>
+  </div>
+</div>
+
+<script src="js/accountInquiry.js"></script>

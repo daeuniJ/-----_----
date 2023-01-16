@@ -1,0 +1,58 @@
+.titleArea{
+    width: 100%;
+}
+.titleArea>div{
+    position: relative;
+}
+.pageUtil{
+    width: 115px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    position: absolute;
+    top: 20px; right: 0;
+}
+.pageUtil>li{
+    width: 33px; height: 33px;
+    border: 1px solid #ddd;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 26px auto;
+    cursor: pointer;
+}
+.pageUtil>li:first-child{
+    background-image: url(../img/titleArea/fax\ 1.png);
+}
+.pageUtil>li:nth-child(2){
+    background-image: url(../img/titleArea/plus.png);
+}
+.pageUtil>li:last-child{
+    background-image: url(../img/titleArea/minus.png);
+}
+.titleArea>div>h2{
+    padding: 60px 0 40px;
+    box-sizing: border-box;
+}
+
+
+
+/*** 1200px ***/
+@media(max-width: 1200px){
+    .pageUtil{
+     right: 15px;
+    }
+
+}
+/*** 1200px ***/
+
+/*** 1130px ***/
+@media(max-width: 1130px){
+    .pageUtil{
+        top: 15px;
+    }
+    .titleArea>div>h2{
+        padding: 45px 0 40px;
+    }
+
+}
+/*** 1130px ***/

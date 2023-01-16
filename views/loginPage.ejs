@@ -1,0 +1,32 @@
+<title>KB 저축은행 로그인</title>
+<div class="login_wrap">
+  <h2 class="main_title">로그인</h2>
+  <div class="login_inner w1200">
+    <div class="login_topCon">
+      <p>KB 저축은행은 보안강화 등을 이유로 보안카드번호(3개 이상 또는 전체)를 요구하지 않습니다.</p>
+      <p>KB 저축은행 홈페이지는 인터넷 주소창이 녹색으로 표시되거나 보안 자물쇠가 있습니다.</p>
+      <p>수사기관 등 공공기관은 어떤 명목으로도 통장 비밀번호 등 금융정보를 묻거나 범죄에 연루되었다는 등의 이유로 
+      <br>돈을 요구하지 않습니다.</p>
+    </div>
+    <div class="login_bottomCon">
+      <div class="login_left">
+        <input class="leftLogin certificateLogin1 f_medium" type="button" value="금융 인증서 로그인" onclick="javascript:alert('준비중입니다.');"></input>
+        <input class="leftLogin certificateLogin2 f_medium" type="button" value="공동 인증서 로그인" onclick="javascript:alert('준비중입니다.');"></input>
+      </div>
+      <form class="login_right" method="post" action="/logininfo">
+        <div class="login_innerTop">
+          <div class="login_inputWrap">
+            <input type="text" name="login_id" placeholder="아이디">
+            <input type="password" name="login_pw" placeholder="비밀번호">
+          </div>
+          <input class="login_btn f_medium" type="submit" value="로그인">
+        </div>
+        <ul class="login_innerBot">
+          <li><a href="/join1">회원가입</a></li>
+          <li><a href="">아이디 찾기</a></li>
+          <li><a href="">비밀번호 찾기</a></li>
+        </ul>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+
+<!-- class명에 list 꼭 넣기! -->
+
+<div class="titleArea">
+    <div class="w1200">
+        <ul class="pageUtil">
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+        </ul>
+        <h2 class="f_bold">카드상품 신청자</h2>
+        <div class="listTop">
+            <div class="list_totalP">
+                <p class="f_gray2" id="list_tt"> </p><p><strong class="f_bold">&nbsp;1</strong>/56페이지</p>
+            </div>
+        </div>
+        <!-- 리스트 테이블 -->
+        <table class="listTable">
+            <colgroup>
+                <col style="width:15%">
+                <col style="width:auto">
+                <col style="width:15%">
+                <col style="width:20%">
+            </colgroup>
+            <thead>
+                <th scope="col">상품종류</th>
+                <th scope="col">신청고객</th>
+                <th scope="col">신청일</th>
+                <th scope="col">발급여부</th>
+            </thead>
+            <tbody>
+                <% rows.forEach((row,index) =>{ %> 
+                <tr>
+                    <td class="num"><%= row.cardproduct %></td>
+                    <td class="listTable_title" onclick="javascript:location.href='/cardsub_info?id=<%= row.id %>'">신청자: <%= row.name %>　　　전화번호:<%= row.tellnum %></td>
+                    <td><%= row.create_time %></td>
+                    <td><span class="present"><%= row.present%></span></td>
+                </tr>
+                <% }); %>
+            </tbody>
+        </table>
+        <div class="list_paddingb">
+        </div>
+  </div>
+</div>
+<div id="topBtn" class="f_gray2"><h4>TOP</h4></div>
+<script src="js/cardsubList.js"></script>

@@ -1,0 +1,106 @@
+    <div class="titleArea">
+      <div class="w1200">
+          <ul class="pageUtil">
+              <li><a href=""></a></li>
+              <li><a href=""></a></li>
+              <li><a href=""></a></li>
+          </ul>
+          <h2 class="f_bold">상품신청</h2>
+          <form action="/cardapplication" method="post" onsubmit="return card_ck()">
+            <h3><%= row.card_name %><%= row.card_category %></h3>
+            <p class="f_gray2 cardinfo"><%= row.card_info%></p>
+            <input type="hidden" value="<%= row.card_name %><%= row.card_category %>" name="cardproduct">
+            <table class="write">
+              <tr class="write_cell">
+                <td class="write_title"><span>*</span>성명</td>
+                <td class="write_select">
+                <input type="text" name="cardname" id="name" maxlength="30">
+                </td>
+              </tr>
+              <tr class="write_cell">
+                <td class="write_title"><span>*</span>전화번호</td>
+                <td class="write_select"><input type="text"  oninput="autoHyphen(this)" name="tellnum" id="tellnum" maxlength="12"></td>
+              </tr>
+              <tr class="write_cell">
+                <td class="write_title"><span>*</span>결제정보</td>
+                <td class="write_select">
+                  <select name="pay" class="pay" value="">
+                    <option value="결제기관">결제기관</option>
+                    <option value="국민은행">국민은행</option>
+                    <option value="신한은행">신한은행</option>
+                    <option value="기업은행">기업은행</option>
+                    <option value="농협은행">농협은행</option>
+                    <option value="산업은행">산업은행</option>
+                    <option value="우리은행">우리은행</option>
+                    <option value="하나은행">하나은행</option>
+                    <option value="신협은행">신협은행</option>
+                    <option value="수협은행">수협은행</option>
+                    <option value="카카오뱅크">카카오뱅크</option>
+                    <option value="케이뱅크">케이뱅크</option>
+                    <option value="부산은행">부산은행</option>
+                    <option value="광주은행">광주은행</option>
+                    <option value="우체국은행">우체국은행</option>
+                  </select>
+                  <input type="text" name="bankAccount" id="bankAccount" placeholder="계좌번호"></td>
+              </tr>
+              <tr class="write_cell">
+                <td class="write_title"><span>*</span>결제일</td>
+                <td class="write_select">
+                  매 월
+                  <input class="write_radio" type='radio' name='account_day' value="1일" checked/>1일
+                  <input class="write_radio" type='radio' name='account_day' value='5일'/>5일
+                  <input class="write_radio" type='radio' name='account_day' value='10일'/>10일
+                  <input class="write_radio" type='radio' name='account_day' value='15일'/>15일
+                  <input class="write_radio" type='radio' name='account_day' value=''/>지정 선택
+                  <input type="number" id="accountSelect" name="reserv_up" value="" disabled="disabled">
+                </td>
+              </tr>
+              <tr class="write_cell">
+                <td class="write_title cardaddress"><span>*</span>카드 수령 주소</td>
+                <td class="write_select">
+                  <input type="text" class="cardadd addnum" name="postcode" id="sample6_postcode" placeholder="우편번호">
+                  <input type="button" class="addsearch"  onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
+                  <input type="text" class="cardadd address" name="address" id="sample6_address" placeholder="주소"><br>
+                  <input type="text" class="cardadd address" name="detailAddress" id="sample6_detailAddress" placeholder="상세주소">
+                  <input type="hidden" class="addsearch adddetails"  id="sample6_extraAddress" placeholder="참고항목">
+                </td>
+              </tr>
+              <tr class="write_cell">
+                <td class="write_title"><span></span>교통카드 신청 여부</td>
+                <td class="write_select">
+                <input class="write_radio" type='radio' name='transportationCard' value="신청" checked/>신청
+                <input class="write_radio" type='radio' name='transportationCard' value="미신청" />미신청
+              </td>
+              </tr>
+              <tr class="write_cell">
+                <td class="write_title card_Limit"><span> 이용한도</span>
+                  <h4 class="f_gray2 f_regular card_notice">신청자의 신용등급에 따라서 <br>
+                  한도가 제한 될 수 있습니다.</h4>
+                </td>
+                <div></div>
+                <td class="write_select">
+                  1 회 <input type="number" name="oncelimit" class="cardlimit">
+                  일 일 <input type="number" name="daylimit" class="cardlimit">
+                  월간 <input type="number" name="monthlimit" class="cardlimit">
+                </td>
+              </tr>
+              <tr class="write_cell">
+                <td class="write_title"><span></span>자동납부</td>
+                <td class="write_select">
+                  <label><input type="checkbox" class="paycheck" name="tellPay" value="checked"> 통신요금</label>
+                  <label><input type="checkbox" class="paycheck" name="gasPay" value="checked"> 도시가스</label>
+                  <label><input type="checkbox" class="paycheck" name="elPay" value="checked"> 전기요금</label>
+                  <label><input type="checkbox" class="paycheck" name="aptPay" value="checked"> 아파트 관리비</label>
+              </td>
+              </tr>
+            </table>
+            <div class="write_btn_wrap">
+              <button type="button" class="write_btn f_bold write_cancle" onclick="javascript:location.href='/'">취소</button>
+              <input class="write_btn f_bold" type="submit" name="upload" id="" value="신청">
+            </div>
+          </form>
+    </div>
+  </div>
+  <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+  <script src="js/address.js"></script>
+  <script src="js/cardsub.js"></script>

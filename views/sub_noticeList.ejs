@@ -1,0 +1,106 @@
+<!-- class명에 list 꼭 넣기! -->
+
+<div class="titleArea">
+  <div class="w1200">
+    <ul class="pageUtil">
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+    </ul>
+    <h2 class="f_bold">공지사항</h2>
+    <div class="list_searchBox">
+      <div>
+        <div class="list_searchBox_left">
+          <select name="list_searchCategory" id="list_searchCategory" class="list_ST list_col">
+            <option value="ZZ">전체</option>
+            <option value="01">안내</option>
+            <option value="02">신상품</option>
+            <option value="03">입찰공고</option>
+            <option value="04">약관개정</option>
+            <option value="05">채용</option>
+          </select>
+          <select name="list_searchCondition" id="list_searchCondition" class="list_ST list_col">
+            <option value="ZZ">전체</option>
+            <option value="con_TTL">제목</option>
+            <option value="enr_DT">작성일</option>
+            <option value="txt_INF">내용</option>
+          </select>
+        </div>
+        <div class="list_searchBox_right">
+          <div>
+            <input id="list_searchKeyword" class="list_searchKeyword list_col" type="text" placeholder="검색어 입력"
+              title="검색어 입력">
+          </div>
+          <button type="button" id="list_btn" class="f_regular">검색</button>
+        </div>
+      </div>
+    </div>
+    <div class="listTop">
+      <div class="list_totalP">
+        <p class="f_gray2" id="list_tt"> </p>
+        <p><strong class="f_bold">&nbsp;1</strong>/<% rows.length %>페이지</p>
+      </div>
+      <div class="list_order">
+        <ul>
+          <li><button type="button" class="notiTorder" onclick="javascript:location.href='/getRecentNoti'">최신순</button>
+          </li>
+          <li><button type="button" class="notiTorder" onclick="javascript:location.href='/getPastNoti'">과거순</button>
+          </li>
+        </ul>
+        <select name="list_viewPage" id="list_viewPage" class="list_ST list_col">
+          <option value="10">10 개씩 보기</option>
+          <option value="20">20 개씩 보기</option>
+          <option value="30">30 개씩 보기</option>
+          <option value="50">50 개씩 보기</option>
+        </select>
+        <button type="button" class="list_viewPageBtn f_regular">확인</button>
+      </div>
+    </div>
+
+    <!-- 리스트 테이블 -->
+    <table class="listTable">
+      <colgroup>
+        <col style="width:10%">
+        <col style="width:15%">
+        <col style="width:auto">
+        <col style="width:20%">
+      </colgroup>
+      <thead>
+        <th scope="col">번호</th>
+        <th scope="col">카테고리</th>
+        <th scope="col">제목</th>
+        <th scope="col">작성일</th>
+      </thead>
+      <tbody>
+        <% rows.forEach((row,index) =>{ %>
+        <tr>
+          <td class="num"><%= index + 1 %></td>
+          <td><a onclick="javascript:location.href='/notiConPage?id=<%= row.id %>'"><%= row.cate %></a></td>
+          <td class="listTable_title"><a onclick="javascript:location.href='/notiConPage?id=<%= row.id %>'"><%= row.title %></a></td>
+          <td class="updateDate"><%= row.date %></td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    <div class="list_writeBtn">
+      <input type="button" value="글쓰기" class="list_writeBtn_check" onclick="javascript:location.href='/notice_write'">
+    </div>
+    <!-- 페이징 -->
+    <nav class="list_paging">
+      <button class="pageBtn page_first"></button>
+      <button class="pageBtn page_prev"></button>
+      <ol>
+        <li></li>
+        <li><a href="">1</a></li>
+        <li></li>
+      </ol>
+      <button class="pageBtn page_next"></button>
+      <button class="pageBtn page_last"></button>
+    </nav>
+  </div>
+</div>
+<div id="topBtn" class="f_gray2">
+  <h4>TOP</h4>
+</div>
+
+<script src="js/sub_noticeList.js"></script>
