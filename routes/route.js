@@ -206,7 +206,7 @@ let user_name = param['user_name'];
 const upload = multer({
   storage: multer.diskStorage({
     destination(req, file, done) {
-      done(null, '../public/img/cardImg/');
+      done(null, 'public/img/cardImg/');
     },
     filename(req, file, done) {
       const ext = path.extname(file.originalname);
