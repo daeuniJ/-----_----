@@ -1,7 +1,7 @@
 const { query } = require('express');
 var mysql = require('mysql');
 var connection = mysql.createConnection({
-  host     : 'kbbank.chl09dgpxexv.ap-northeast-1.rds.amazonaws.com',
+  host     : 'database-1.chl09dgpxexv.ap-northeast-1.rds.amazonaws.com',
   user     : 'root',
   password : '95052910',
   database : 'kbbank',
