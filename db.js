@@ -5,7 +5,7 @@ var connection = mysql.createConnection({
   user     : 'root',
   password : '95052910',
   database : 'kbbank',
-  // dateStrings : 'date',
+  dateStrings : 'date',
   multipleStatements: true
 });
 
