@@ -1,11 +1,11 @@
 const { query } = require('express');
 var mysql = require('mysql');
 var connection = mysql.createConnection({
-  host     : 'database-2.cdgtgmckehex.ap-northeast-1.rds.amazonaws.com',
-  user     : 'admin',
-  password : 'qwer1234',
+  host     : 'kbbank.chl09dgpxexv.ap-northeast-1.rds.amazonaws.com',
+  user     : 'root',
+  password : '95052910',
   database : 'kbbank',
-  dateStrings : 'date',
+  // dateStrings : 'date',
   multipleStatements: true
 });
 
